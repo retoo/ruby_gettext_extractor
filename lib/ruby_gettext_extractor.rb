@@ -12,12 +12,19 @@ rescue LoadError #version prior to 2.0
   require 'gettext/rgettext'
 end
 
-module RubyGetTextExtracter
+module RubyGettextExtracter
   extend self
 
   def parse(file, targets = [])  # :nodoc:
+    content = File.read(file)
+
+    parse_string(content, file, targets)
+  end
+
+  def parse_string(content, file, targets=[])
+    # file is just for information in error messages
     parser = Extractor.new(file, targets)
-    results = parser.run()
+    results = parser.run(content)
   end
 
   def target?(file)  # :nodoc:
@@ -41,9 +48,7 @@ module RubyGetTextExtracter
       super()
     end
 
-    def run()
-      content = File.read(@filename)
-
+    def run(content)
       self.parse(content)
       return @results
     end
@@ -138,4 +143,4 @@ module RubyGetTextExtracter
   end
 end
 
-GetText::RGetText.add_parser(RubyGetTextExtracter)
+GetText::RGetText.add_parser(RubyGettextExtracter)

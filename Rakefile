@@ -4,7 +4,7 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "ruby-gettext-extractor"
+    gem.name = "ruby_gettext_extractor"
     gem.summary = %Q{Alternative gettext parser for ruby files}
     gem.description = %Q{Alternative and more powerful gettext parser for ruby files. It covers some special cases which the normal parser can't handle}
     gem.email = "reto (ät) schuettel (dot) ch"
@@ -50,7 +50,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "ruby-gettext-extractor #{version}"
+  rdoc.title = "ruby_gettext_extractor #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

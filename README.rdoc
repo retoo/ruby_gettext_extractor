@@ -1,4 +1,4 @@
-= ruby-gettext-extractor
+= ruby_gettext_extractor
 
 Description goes here.
 
