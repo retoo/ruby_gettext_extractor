@@ -5,7 +5,7 @@ require 'test_helper'
 
 class TestGetTextParser < Test::Unit::TestCase
   def test_ruby
-    ary = RubyGettextExtracter.parse('test/cases/gettext.rb')
+    ary = RubyGettextExtractor.parse('test/cases/gettext.rb')
 
     assert_equal(['aaa', 'test/cases/gettext.rb:8'], ary[0])
     assert_equal(['aaa\n', 'test/cases/gettext.rb:12'], ary[1])
@@ -30,7 +30,7 @@ class TestGetTextParser < Test::Unit::TestCase
   end
 
   def test_ruby_N
-    ary = RubyGettextExtracter.parse('test/cases/N_.rb')
+    ary = RubyGettextExtractor.parse('test/cases/N_.rb')
 
     assert_equal(['aaa', 'test/cases/N_.rb:8'], ary[0])
     assert_equal(['aaa\n', 'test/cases/N_.rb:12'], ary[1])
@@ -50,7 +50,7 @@ class TestGetTextParser < Test::Unit::TestCase
   end
 
   def test_ruby_n
-    ary = RubyGettextExtracter.parse('test/cases/ngettext.rb')
+    ary = RubyGettextExtractor.parse('test/cases/ngettext.rb')
     assert_equal(["aaa\000aaa2", 'test/cases/ngettext.rb:8'], ary[0])
     assert_equal(["bbb\\n\000ccc2\\nccc2", 'test/cases/ngettext.rb:12'], ary[1])
     # position difference caused by multiline statement, 18 instead of 16
@@ -68,7 +68,7 @@ class TestGetTextParser < Test::Unit::TestCase
   end
 
   def test_ruby_p
-    ary = RubyGettextExtracter.parse('test/cases/pgettext.rb')
+    ary = RubyGettextExtractor.parse('test/cases/pgettext.rb')
     assert_equal(["AAA\004BBB", "test/cases/pgettext.rb:8", "test/cases/pgettext.rb:12"], ary[0])
     assert_equal(["AAA|BBB\004CCC", "test/cases/pgettext.rb:16"], ary[1])
     assert_equal(["AAA\004CCC", "test/cases/pgettext.rb:20"], ary[2])
@@ -76,7 +76,7 @@ class TestGetTextParser < Test::Unit::TestCase
   end
 
   def test_new_cases
-    ary = RubyGettextExtracter.parse('test/cases/new.rb')
+    ary = RubyGettextExtractor.parse('test/cases/new.rb')
     assert_equal(["baz", "test/cases/new.rb:5"], ary[0])
     assert_equal(["foobarbaz", "test/cases/new.rb:5"], ary[1])
     assert_equal(["world", "test/cases/new.rb:6"], ary[2])
