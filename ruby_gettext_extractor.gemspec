@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ruby_gettext_extractor}
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Reto Sch\303\274ttel"]
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/ruby_gettext_extractor.rb",
+     "ruby_gettext_extractor.gemspec",
      "test/cases/N_.rb",
      "test/cases/gettext.rb",
      "test/cases/helper.rb",
