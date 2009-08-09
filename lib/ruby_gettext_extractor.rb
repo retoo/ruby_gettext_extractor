@@ -17,7 +17,6 @@ module RubyGettextExtracter
 
   def parse(file, targets = [])  # :nodoc:
     content = File.read(file)
-
     parse_string(content, file, targets)
   end
 
@@ -70,18 +69,15 @@ module RubyGettextExtracter
         if args.first == :arglist && args.size == 2
           second_part = extract_string(args.last)
 
-          return first_part +  second_part
+          return nil if second_part.nil?
+
+          return first_part + second_part
         else
           raise "uuh?"
         end
       else
-        if node.first == :lit
-          return nil
-        else
-          raise "#{@filename}:#{lexer.lineno} #{node.inspect} "
-        end
+        return nil
       end
-
     end
 
     def extract_key(args, seperator)
