@@ -71,7 +71,7 @@ module RubyGettextExtractor
 
           return nil if second_part.nil?
 
-          return first_part + second_part
+          return first_part.to_s + second_part.to_s
         else
           raise "uuh?"
         end
