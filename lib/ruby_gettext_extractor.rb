@@ -23,7 +23,7 @@ module RubyGettextExtractor
   def parse_string(content, file, targets=[])
     # file is just for information in error messages
     parser = Extractor.new(file, targets)
-    results = parser.run(content)
+    parser.run(content)
   end
 
   def target?(file)  # :nodoc:
