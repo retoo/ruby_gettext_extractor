@@ -83,5 +83,6 @@ class TestGetTextParser < Test::Unit::TestCase
     assert_equal(["foo", "test/cases/new.rb:6"], ary[3])
     assert_equal(["ruby_is_wicked", "test/cases/new.rb:6"], ary[4])
     assert_equal(["foocliclaclublibuzbiz", "test/cases/new.rb:7"], ary[5])
+    assert_equal(["Movie missing", "test/cases/new.rb:8", "test/cases/new.rb:12"], ary[6])
   end
 end
