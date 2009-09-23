@@ -1,6 +1,10 @@
 = ruby_gettext_extractor
 
-Description goes here.
+ruby_gettext_extractor aims to replace the default ruby parser shipped with the
+gettext. The normal ruby gettext parser is unable to find gettext invokations
+within strings, like "Foo: #{_("bar")}". Usually this itself wouldn't b a big
+issue but starting with Haml 2.2 haml uses exactly this kind of construct in
+its  
 
 == Note on Patches/Pull Requests
  
