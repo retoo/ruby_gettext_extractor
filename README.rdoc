@@ -1,8 +1,8 @@
 = IMPORTANT
 
 ruby_gettext_extractor is currently solely used (and bundled) by michael
-grossers gettext_i18n_rails project. The bundled version can be considered as 
-current upstream, this repository is only historical fork.
+grossers gettext_i18n_rails project. The bundled version can be considered 
+to be the current upstream. This repository remains for historical purposes.
 
 Please contact me on github if you are planning to use ruby_gettext_extractor
 outside the scope of gettext_i18n_rails.
