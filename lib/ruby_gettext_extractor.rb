@@ -1,7 +1,5 @@
 #!/usr/bin/ruby
 # parser/ruby.rb - look for gettext msg strings in ruby files
-# Copyright (C) 2009 Reto Schüttel <reto (ät) schuettel (dot) ch>
-# You may redistribute it and/or modify it under the same license terms as Ruby.
 
 require 'rubygems'
 require 'ruby_parser'
